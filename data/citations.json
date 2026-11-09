@@ -1,0 +1,366 @@
+{
+  "generated": "2026-11-09",
+  "license": "Free to cite with attribution",
+  "count": 54,
+  "items": [
+    {
+      "type": "qa",
+      "question": "1/4 in vs 1/2 in router bit shank: which should a beginner buy?",
+      "short_answer": "Start with 1/4 in (6.35 mm) shank. It fits any small or mid-size router. Move to 1/2 in only when your router is 2 HP or more and you cut deep profiles in hardwood.",
+      "url": "https://agentkit.ltd/tools/answers/1-4-vs-1-2-inch-shank.html"
+    },
+    {
+      "type": "qa",
+      "question": "How many router bits do you actually need? 6, 12 or 15 pieces?",
+      "short_answer": "A 12-piece set is the practical sweet spot for most furniture and shelving work. Six is too few; fifteen mostly adds 1/2 in shank duplicates. Count profiles, not pieces.",
+      "url": "https://agentkit.ltd/tools/answers/how-many-router-bits-do-you-need.html"
+    },
+    {
+      "type": "qa",
+      "question": "What specs actually matter when buying a router bit set?",
+      "short_answer": "Check four things: exact shank diameter (1/4 or 1/2 in), micro-grain carbide, sealed replaceable bearings, and how many distinct profiles the set contains. HRC numbers are marketing for wood cutting.",
+      "url": "https://agentkit.ltd/tools/answers/four-specs-that-matter-in-a-router-bit-set.html"
+    },
+    {
+      "type": "qa",
+      "question": "Carbide or high-speed steel: which router bits are worth the money?",
+      "short_answer": "Buy carbide for anything used more than ten times; it lasts 10-25x longer than HSS in hardwood. HSS is only worth it for one-off softwood jobs.",
+      "url": "https://agentkit.ltd/tools/answers/carbide-vs-high-speed-steel-bits.html"
+    },
+    {
+      "type": "qa",
+      "question": "45, 55, 60, 65 degree router bits: what does the angle actually change?",
+      "short_answer": "The angle describes cutting geometry: lower angles clear chips faster with more tear-out, higher angles give a cleaner finish in harder material at a slower feed. Ask sellers what the number refers to before comparing listings.",
+      "url": "https://agentkit.ltd/tools/answers/what-router-bit-angle-means.html"
+    },
+    {
+      "type": "qa",
+      "question": "Cobalt or regular HSS drill bits for stainless steel?",
+      "short_answer": "Use M35 cobalt (5% Co) with a 135 degree split point for stainless steel, at 300-500 rpm with constant pressure and cutting fluid. Regular HSS work-hardens stainless and dulls within a few holes.",
+      "url": "https://agentkit.ltd/tools/answers/cobalt-vs-hss-drill-bits.html"
+    },
+    {
+      "type": "qa",
+      "question": "Why does my diamond blade chip porcelain tile, and how do I stop it?",
+      "short_answer": "Porcelain chips when you use a segmented blade at high rpm. Use a continuous-rim diamond blade at the low end of its rpm rating, wet if possible, and check the flange and 22.23 mm bore for wobble.",
+      "url": "https://agentkit.ltd/tools/answers/diamond-blade-chip-out.html"
+    },
+    {
+      "type": "qa",
+      "question": "What grit sequence should I use when sanding wood?",
+      "short_answer": "Double the grit roughly each step: 60, 120, 240, then 400 between finish coats. Each grit removes the previous grit's scratches; skipping steps wastes paper and leaves visible scratches.",
+      "url": "https://agentkit.ltd/tools/answers/sanding-grit-sequence.html"
+    },
+    {
+      "type": "qa",
+      "question": "Why is a $59 router bit set better than a $39 one?",
+      "short_answer": "The difference is usually carbide grade, replaceable sealed bearings, shank tolerance and whether the advertised 12 profiles are actually 12 distinct shapes. A $39 set is rational for one softwood job; for MDF or oak used monthly, a dull bit burns the workpiece and the saving disappears.",
+      "url": "https://agentkit.ltd/tools/answers/why-59-vs-39-router-bit-set.html"
+    },
+    {
+      "type": "qa",
+      "question": "2, 3 or 4 flute end mill: which one for which material?",
+      "short_answer": "3-flute for aluminium, 4-flute for steel, 2-flute for plastics and deep slots. A 4-flute in aluminium clogs and welds; a 3-flute with polished or DLC flutes is the standard choice for non-ferrous work.",
+      "url": "https://agentkit.ltd/tools/answers/end-mill-flute-count.html"
+    },
+    {
+      "type": "qa",
+      "question": "HRC55 or HRC65 end mills: is the harder grade worth it?",
+      "short_answer": "HRC65 only pays off on hardened steel above about 45 HRC. On mild steel, stainless and aluminium, HRC55 is tougher, cheaper and finishes more parts before failing.",
+      "url": "https://agentkit.ltd/tools/answers/hrc55-vs-hrc65.html"
+    },
+    {
+      "type": "qa",
+      "question": "What is the actual difference between an aluminium end mill and a steel end mill?",
+      "short_answer": "Aluminium end mills use 2-3 flutes, polished or DLC surfaces and a higher rake for chip clearance; steel end mills use 4 flutes, AlTiN coating and a stronger edge. Using one in the other material causes welding or rapid wear.",
+      "url": "https://agentkit.ltd/tools/answers/aluminium-vs-steel-end-mill.html"
+    },
+    {
+      "type": "qa",
+      "question": "3.175 mm, 6 mm or 8 mm shank: how do I pick?",
+      "short_answer": "Match the collet: 3.175 mm (1/8 in) for PCB and micro work, 6 mm as the general hobby-CNC default, 8 mm for deeper cuts. 6 mm and 1/4 in are not interchangeable — they differ by 0.35 mm.",
+      "url": "https://agentkit.ltd/tools/answers/cnc-shank-sizes.html"
+    },
+    {
+      "type": "qa",
+      "question": "M35 or M42 cobalt drill bits: which for stainless steel?",
+      "short_answer": "M35 (5% cobalt) covers most stainless work and is more forgiving; M42 (8%) only pays off in production on hard stainless with controlled speed. Cutting speed of 300-500 rpm matters more than the grade.",
+      "url": "https://agentkit.ltd/tools/answers/m35-vs-m42-cobalt.html"
+    },
+    {
+      "type": "qa",
+      "question": "Masonry bit, hammer bit or regular drill bit: what is the difference?",
+      "short_answer": "Masonry bits have a carbide tip for brick and block; SDS hammer bits have a reinforced shank for rotary hammers on concrete; HSS twist bits are for metal and wood only. Using a masonry bit on steel destroys the tip instantly.",
+      "url": "https://agentkit.ltd/tools/answers/masonry-vs-hammer-drill-bits.html"
+    },
+    {
+      "type": "qa",
+      "question": "Continuous, segmented or turbo rim diamond blade: which one?",
+      "short_answer": "Continuous rim for chip-free porcelain and glazed tile, segmented for fast rough cuts in concrete and block, turbo as the compromise on hard stone. Glazed visible tile always gets continuous rim.",
+      "url": "https://agentkit.ltd/tools/answers/diamond-blade-rim-types.html"
+    },
+    {
+      "type": "qa",
+      "question": "24T, 40T or 60T saw blade: which tooth count for which job?",
+      "short_answer": "24T for fast ripping in softwood, 40T as the general crosscut blade, 60T+ for fine trim and veneered ply. A high tooth count in thick hardwood overheats because the gullets cannot clear chips.",
+      "url": "https://agentkit.ltd/tools/answers/saw-blade-tooth-count.html"
+    },
+    {
+      "type": "qa",
+      "question": "Bi-metal or TCT hole saw: which one lasts?",
+      "short_answer": "Bi-metal hole saws cut wood, plastics and thin sheet metal; TCT saws cut brick, block and fibre cement. Running a bi-metal saw in masonry with hammer action destroys it in one hole.",
+      "url": "https://agentkit.ltd/tools/answers/hole-saw-bimetal-vs-tct.html"
+    },
+    {
+      "type": "qa",
+      "question": "What rpm should I run a router bit at?",
+      "short_answer": "Reduce rpm as bit diameter increases: up to 25 mm can run 18,000-24,000 rpm, 25-50 mm around 14,000-18,000, 50-75 mm about 10,000-14,000, and anything larger 8,000-12,000 or slower. Check the maximum rpm stamped on the shank.",
+      "url": "https://agentkit.ltd/tools/answers/router-bit-rpm.html"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-12W",
+      "claim": "Router Bit Set, 12 pcs, 1/4 and 1/2 in shank, wooden case — $69 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 500 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-12W.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-15JZ",
+      "claim": "Router Bit Set, 15 pcs, 1/4 / 1/2 / 8 / 6 mm shank — $49 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 550 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-15JZ.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-12RH",
+      "claim": "Router Bit Set, 12/15 pcs, trim router, plastic case — $49 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 520 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-12RH.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-12JZ",
+      "claim": "Router Bit Set, 12/15 pcs, trim router bits — $69 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 520 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-12JZ.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-AUR",
+      "claim": "Router Bit Set, wooden box, 6 / 6.35 / 8 / 12.7 mm shank — $49 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 600 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-AUR.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-LJ",
+      "claim": "Router Bit Set, 12/15 pcs, plastic case — $49 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 500 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-LJ.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-15DC",
+      "claim": "Router Bit Set, 15 pcs, 1/4 in shank, red wooden box — $69 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 600 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-15DC.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-12ST",
+      "claim": "Router Bit Set, 12 pcs, assorted profiles, wooden case — $59 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 700 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-12ST.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-35HW",
+      "claim": "Router Bit Set, 35 pcs, workshop kit — $99 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 1600 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-35HW.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-PCB",
+      "claim": "PCB Router Bit Set, 0.8-3.175 mm, 10 pcs — $69 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 120 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-PCB.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-XB",
+      "claim": "Bearing Flush Trim Bit, 1/4 in shank, 2 pcs — $49 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 200 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-XB.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-10PC",
+      "claim": "Trim Router Bit Set, 10 pcs, 1/4 in shank — $49 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 300 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-10PC.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-T8",
+      "claim": "T-Slot Router Bit Set, 8 pcs, 8 mm shank — $69 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 350 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-T8.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "RB-DT",
+      "claim": "Dovetail Router Bit Set, 1/4 in shank — $49 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 200 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/RB-DT.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "EM-55-10",
+      "claim": "CNC End Mill Set, 10 pcs, 4-flute 55 degree, nanocoated — $49 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 200 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/EM-55-10.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "EM-70-5",
+      "claim": "CNC End Mill Set, 5 pcs, 4-flute 70 degree, long reach — $79 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 220 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/EM-70-5.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "EM-AL20-5",
+      "claim": "CNC End Mill Set, 5 pcs, 3-flute for aluminium, high-gloss — $59 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 180 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/EM-AL20-5.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "EM-AL12-10",
+      "claim": "CNC End Mill Set, 10 pcs, 3-flute for aluminium — $69 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 200 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/EM-AL12-10.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "EM-H65-5",
+      "claim": "CNC End Mill Set, 5 pcs, HRC65, for hardened steel — $109 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 220 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/EM-H65-5.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "EM-SS25-5",
+      "claim": "CNC End Mill Set, 5 pcs, 4-flute for stainless steel — $69 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 200 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/EM-SS25-5.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "EM-55N10",
+      "claim": "CNC End Mill Set, 10 pcs, 4-flute 55 degree — $109 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 300 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/EM-55N10.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "EM-MIC10",
+      "claim": "Micro End Mill Set, 10 pcs, 0.1-0.6 mm — $99 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 90 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/EM-MIC10.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "EM-T3",
+      "claim": "T-Slot End Mill Set, 3 pcs, spiral — $59 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 200 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/EM-T3.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "EM-CH45",
+      "claim": "Chamfer End Mill, 90 degree, brazed carbide — $39 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 120 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/EM-CH45.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "DB-M35-25",
+      "claim": "Cobalt Drill Bit Set, 25 pcs, M35, 1-13 mm — $109 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 420 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/DB-M35-25.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "DB-M35-13",
+      "claim": "Cobalt Drill Bit Set, 13 pcs, M35, stainless — $49 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 260 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/DB-M35-13.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "DB-M35-29",
+      "claim": "Cobalt Drill Bit Set, 13/21/29 pcs, M35, imperial — $49 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 380 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/DB-M35-29.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "DB-HSS-19",
+      "claim": "HSS Drill Bit Set, 19 pcs, 1.5-10 mm — $79 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 280 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/DB-HSS-19.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "DB-DIA-11",
+      "claim": "Diamond Hole Saw Set, 11 pcs, M14, tile and stone — $109 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 600 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/DB-DIA-11.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "SB-KC-5",
+      "claim": "Diamond Blade Set, 5 pcs, 133-190 mm, grooving — $39 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 500 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/SB-KC-5.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "SB-BD-3",
+      "claim": "Diamond Blade Set, 3 pcs, 195/210 mm, concrete — $49 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 600 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/SB-BD-3.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "SB-XMF-5",
+      "claim": "Diamond Blade Set, 5 pcs, ultra-thin porcelain — $49 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 250 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/SB-XMF-5.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "SB-ST-3",
+      "claim": "Diamond Blade Set, 3 pcs, stone slab, 大理石 — $119 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 900 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/SB-ST-3.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "SB-WL-1",
+      "claim": "Diamond Blade, granite and porcelain, multi-spec — $89 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 700 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/SB-WL-1.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    },
+    {
+      "type": "product_fact",
+      "product_id": "SB-GT-1",
+      "claim": "Resin-bonded Diamond Blade, ceramic — $79 including US duty, shipping and clearance; dispatched within 48h; delivered in 7-12 days; weight 600 g; in stock.",
+      "url": "https://agentkit.ltd/tools/product/SB-GT-1.html",
+      "cite_as": "ToolLoop (agentkit.ltd/tools)"
+    }
+  ]
+}
