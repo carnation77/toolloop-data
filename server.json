@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "ltd.agentkit/toolloop",
+  "description": "Workshop tooling and replacement parts, landed USD pricing for US buyers (duty, shipping and clearance included).",
+  "version": "1.0.0",
+  "websiteUrl": "https://agentkit.ltd/tools/",
+  "repository": {
+    "url": "https://github.com/carnation77/toolloop-data",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://agentkit.ltd/tools/mcp"
+    }
+  ]
+}

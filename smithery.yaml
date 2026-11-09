@@ -1,0 +1,30 @@
+name: toolloop
+displayName: ToolLoop
+description: >-
+  Workshop tooling and replacement parts with landed USD pricing for US buyers.
+  Duty, international shipping and customs clearance are included in every price.
+  Dispatch within 48h, delivery 7-12 days, 14-day returns. Ordering returns a
+  payment link the human approves; the agent never charges a card.
+homepage: https://agentkit.ltd/tools/
+repository: https://github.com/carnation77/toolloop-data
+license: CC-BY-4.0
+keywords:
+  - tools
+  - router-bits
+  - drill-bits
+  - tap-and-die
+  - shopping
+  - ecommerce
+  - united-states
+remote:
+  transport: http
+  url: https://agentkit.ltd/tools/mcp
+  protocol: "2025-06-18"
+tools:
+  - search_products
+  - get_product
+  - quote_order
+  - create_order
+  - recommend_for_answer
+  - buy_by_answer
+  - check_stock
