@@ -1,0 +1,1140 @@
+{
+  "meta": {
+    "brand": "ToolLoop",
+    "site_name": "ToolLoop — Workshop Tooling, Answered",
+    "base_url": "https://agentkit.ltd/tools",
+    "currency": "USD",
+    "contact": "hello@agentkit.ltd",
+    "policy": {
+      "ships_from": "China",
+      "processing_days": "2",
+      "transit_days": "7-12",
+      "returns": "Unopened items: refund within 14 days of delivery. Damaged in transit: photo + replacement, no return needed.",
+      "price_lock_days": 30,
+      "stock_note": "Availability reflects committed capacity from our manufacturing partners."
+    }
+  },
+  "products": [
+    {
+      "id": "RB-12W",
+      "name": "木工铣刀套装 12 件",
+      "name_en": "Router Bit Set, 12 pcs, 1/4 in shank, wooden case",
+      "category": "Router Bits",
+      "description": "Router Bit Set, 12 pcs, 1/4 in shank, wooden case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 500,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "12 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 49.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.90",
+      "rating": {
+        "value": 4.9,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "12 pcs",
+      "source_title": "Router Bit Set, 12 pcs, 1/4 in shank, wooden case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "536084540628",
+        "url": "https://detail.1688.com/offer/536084540628.html",
+        "supplier": "南发",
+        "spec": "12 pcs",
+        "unit_cny": 44,
+        "qty": 1,
+        "cost_cny": 50,
+        "weight_g": 500,
+        "stock_at_check": 993,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.425,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "RB-12P",
+      "name": "木工铣刀套装 12 件",
+      "name_en": "Router Bit Set, 12 pcs, 1/4 in shank, plastic case",
+      "category": "Router Bits",
+      "description": "Router Bit Set, 12 pcs, 1/4 in shank, plastic case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 500,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "12 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 49.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.90",
+      "rating": {
+        "value": 4.9,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "12 pcs",
+      "source_title": "Router Bit Set, 12 pcs, 1/4 in shank, plastic case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "536084540628",
+        "url": "https://detail.1688.com/offer/536084540628.html",
+        "supplier": "南发",
+        "spec": "12 pcs",
+        "unit_cny": 40,
+        "qty": 1,
+        "cost_cny": 46,
+        "weight_g": 500,
+        "stock_at_check": 802,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.425,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "RB-15W",
+      "name": "木工铣刀套装 15 件",
+      "name_en": "Router Bit Set, 15 pcs, 1/4 in shank, wooden case",
+      "category": "Router Bits",
+      "description": "Router Bit Set, 15 pcs, 1/4 in shank, wooden case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 550,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "15 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 59.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.90",
+      "rating": {
+        "value": 4.9,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "15 pcs",
+      "source_title": "Router Bit Set, 15 pcs, 1/4 in shank, wooden case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "536084540628",
+        "url": "https://detail.1688.com/offer/536084540628.html",
+        "supplier": "南发",
+        "spec": "15 pcs",
+        "unit_cny": 49,
+        "qty": 1,
+        "cost_cny": 55,
+        "weight_g": 550,
+        "stock_at_check": 638,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.425,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "RB-15P",
+      "name": "木工铣刀套装 15 件",
+      "name_en": "Router Bit Set, 15 pcs, 1/4 in shank, plastic case",
+      "category": "Router Bits",
+      "description": "Router Bit Set, 15 pcs, 1/4 in shank, plastic case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 550,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "15 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 49.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.90",
+      "rating": {
+        "value": 4.9,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "15 pcs",
+      "source_title": "Router Bit Set, 15 pcs, 1/4 in shank, plastic case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "536084540628",
+        "url": "https://detail.1688.com/offer/536084540628.html",
+        "supplier": "南发",
+        "spec": "15 pcs",
+        "unit_cny": 45,
+        "qty": 1,
+        "cost_cny": 51,
+        "weight_g": 550,
+        "stock_at_check": 771,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.425,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "RB-12HW",
+      "name": "木工铣刀套装 12 件",
+      "name_en": "Router Bit Set, 12 pcs, 1/2 in shank, wooden case",
+      "category": "Router Bits",
+      "description": "Router Bit Set, 12 pcs, 1/2 in shank, wooden case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 950,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "12 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 59.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.90",
+      "rating": {
+        "value": 4.9,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "12 pcs",
+      "source_title": "Router Bit Set, 12 pcs, 1/2 in shank, wooden case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "536084540628",
+        "url": "https://detail.1688.com/offer/536084540628.html",
+        "supplier": "南发",
+        "spec": "12 pcs",
+        "unit_cny": 65,
+        "qty": 1,
+        "cost_cny": 71,
+        "weight_g": 950,
+        "stock_at_check": 40,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.425,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "RB-15HW",
+      "name": "木工铣刀套装 15 件",
+      "name_en": "Router Bit Set, 15 pcs, 1/2 in shank, wooden case",
+      "category": "Router Bits",
+      "description": "Router Bit Set, 15 pcs, 1/2 in shank, wooden case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 1000,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "15 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 69.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.90",
+      "rating": {
+        "value": 4.9,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "15 pcs",
+      "source_title": "Router Bit Set, 15 pcs, 1/2 in shank, wooden case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "536084540628",
+        "url": "https://detail.1688.com/offer/536084540628.html",
+        "supplier": "南发",
+        "spec": "15 pcs",
+        "unit_cny": 70,
+        "qty": 1,
+        "cost_cny": 76,
+        "weight_g": 1000,
+        "stock_at_check": 10,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.425,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "RB-12Z",
+      "name": "木工铣刀套装 12 件",
+      "name_en": "Router Bit Set, 12 pcs, 1/4 in shank, wooden case",
+      "category": "Router Bits",
+      "description": "Router Bit Set, 12 pcs, 1/4 in shank, wooden case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 600,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "12 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 49.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.90",
+      "rating": {
+        "value": 5.0,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "12 pcs",
+      "source_title": "Router Bit Set, 12 pcs, 1/4 in shank, wooden case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "541018964441",
+        "url": "https://detail.1688.com/offer/541018964441.html",
+        "supplier": "钻王",
+        "spec": "12 pcs",
+        "unit_cny": 42,
+        "qty": 1,
+        "cost_cny": 48,
+        "weight_g": 600,
+        "stock_at_check": 99378,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.504,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "RB-15Z",
+      "name": "木工铣刀套装 15 件",
+      "name_en": "Router Bit Set, 15 pcs, 1/4 in shank, wooden case",
+      "category": "Router Bits",
+      "description": "Router Bit Set, 15 pcs, 1/4 in shank, wooden case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 600,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "15 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 59.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.90",
+      "rating": {
+        "value": 5.0,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "15 pcs",
+      "source_title": "Router Bit Set, 15 pcs, 1/4 in shank, wooden case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "541018964441",
+        "url": "https://detail.1688.com/offer/541018964441.html",
+        "supplier": "钻王",
+        "spec": "15 pcs",
+        "unit_cny": 48,
+        "qty": 1,
+        "cost_cny": 54,
+        "weight_g": 600,
+        "stock_at_check": 99083,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.504,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "RB-12Z8",
+      "name": "木工铣刀套装 12 件",
+      "name_en": "Router Bit Set, 12 pcs, 8 mm shank, wooden case",
+      "category": "Router Bits",
+      "description": "Router Bit Set, 12 pcs, 8 mm shank, wooden case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 600,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "12 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 49.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.90",
+      "rating": {
+        "value": 5.0,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "12 pcs",
+      "source_title": "Router Bit Set, 12 pcs, 8 mm shank, wooden case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "541018964441",
+        "url": "https://detail.1688.com/offer/541018964441.html",
+        "supplier": "钻王",
+        "spec": "12 pcs",
+        "unit_cny": 42,
+        "qty": 1,
+        "cost_cny": 48,
+        "weight_g": 600,
+        "stock_at_check": 99678,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.504,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "RB-15Z8",
+      "name": "木工铣刀套装 15 件",
+      "name_en": "Router Bit Set, 15 pcs, 8 mm shank, wooden case",
+      "category": "Router Bits",
+      "description": "Router Bit Set, 15 pcs, 8 mm shank, wooden case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 600,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "15 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 59.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.90",
+      "rating": {
+        "value": 5.0,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "15 pcs",
+      "source_title": "Router Bit Set, 15 pcs, 8 mm shank, wooden case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "541018964441",
+        "url": "https://detail.1688.com/offer/541018964441.html",
+        "supplier": "钻王",
+        "spec": "15 pcs",
+        "unit_cny": 48,
+        "qty": 1,
+        "cost_cny": 54,
+        "weight_g": 600,
+        "stock_at_check": 99996,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.504,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "DB-51C",
+      "name": "钻头套装 51 件",
+      "name_en": "Cobalt Drill Bit Set, 51 pcs, HSS-Co, metal case",
+      "category": "Drill Bits",
+      "description": "Cobalt Drill Bit Set, 51 pcs, HSS-Co, metal case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 620,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "51 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 69.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.50",
+      "rating": {
+        "value": 5.0,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "51 pcs",
+      "source_title": "Cobalt Drill Bit Set, 51 pcs, HSS-Co, metal case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "853205220333",
+        "url": "https://detail.1688.com/offer/853205220333.html",
+        "supplier": "欣起",
+        "spec": "51 pcs",
+        "unit_cny": 81.8,
+        "qty": 1,
+        "cost_cny": 87.8,
+        "weight_g": 620,
+        "stock_at_check": 190,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": null,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "DB-13M",
+      "name": "钻头套装 13 件",
+      "name_en": "Cobalt Drill Bit Set, 13 pcs, M35, imperial, metal case",
+      "category": "Drill Bits",
+      "description": "Cobalt Drill Bit Set, 13 pcs, M35, imperial, metal case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 247,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "13 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 59.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.50",
+      "rating": {
+        "value": 4.8,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "13 pcs",
+      "source_title": "Cobalt Drill Bit Set, 13 pcs, M35, imperial, metal case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "797381074230",
+        "url": "https://detail.1688.com/offer/797381074230.html",
+        "supplier": "Mr Drill",
+        "spec": "13 pcs",
+        "unit_cny": 24,
+        "qty": 1,
+        "cost_cny": 30,
+        "weight_g": 247,
+        "stock_at_check": 1000,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": null,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "DB-21M",
+      "name": "钻头套装 21 件",
+      "name_en": "Cobalt Drill Bit Set, 21 pcs, M35, imperial, metal case",
+      "category": "Drill Bits",
+      "description": "Cobalt Drill Bit Set, 21 pcs, M35, imperial, metal case. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 717,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "21 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 59.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.50",
+      "rating": {
+        "value": 4.8,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "21 pcs",
+      "source_title": "Cobalt Drill Bit Set, 21 pcs, M35, imperial, metal case",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "797381074230",
+        "url": "https://detail.1688.com/offer/797381074230.html",
+        "supplier": "Mr Drill",
+        "spec": "21 pcs",
+        "unit_cny": 58,
+        "qty": 1,
+        "cost_cny": 64,
+        "weight_g": 717,
+        "stock_at_check": 1000,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": null,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "TD-40B",
+      "name": "丝锥板牙套装 40 件",
+      "name_en": "Tap and Die Set, 40 pcs, metric M3-M12, black oxide",
+      "category": "Tap & Die",
+      "description": "Tap and Die Set, 40 pcs, metric M3-M12, black oxide. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 1150,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "40 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 59.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.40",
+      "rating": {
+        "value": 5.0,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "40 pcs",
+      "source_title": "Tap and Die Set, 40 pcs, metric M3-M12, black oxide",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "861185267808",
+        "url": "https://detail.1688.com/offer/861185267808.html",
+        "supplier": "义乌张陈",
+        "spec": "40 pcs",
+        "unit_cny": 38,
+        "qty": 1,
+        "cost_cny": 42,
+        "weight_g": 1150,
+        "stock_at_check": 991,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.54,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "TD-40",
+      "name": "丝锥板牙套装 40 件",
+      "name_en": "Tap and Die Set, 40 pcs, metric M3-M12, carbon steel",
+      "category": "Tap & Die",
+      "description": "Tap and Die Set, 40 pcs, metric M3-M12, carbon steel. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 1150,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "40 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 65.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.40",
+      "rating": {
+        "value": 5.0,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "40 pcs",
+      "source_title": "Tap and Die Set, 40 pcs, metric M3-M12, carbon steel",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "861185267808",
+        "url": "https://detail.1688.com/offer/861185267808.html",
+        "supplier": "义乌张陈",
+        "spec": "40 pcs",
+        "unit_cny": 42,
+        "qty": 1,
+        "cost_cny": 46,
+        "weight_g": 1150,
+        "stock_at_check": 946,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.54,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "TD-40T",
+      "name": "丝锥板牙套装 40 件",
+      "name_en": "Tap Set, 40 pcs, metric M3-M12, carbon steel",
+      "category": "Tap & Die",
+      "description": "Tap Set, 40 pcs, metric M3-M12, carbon steel. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 1200,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "40 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 65.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.40",
+      "rating": {
+        "value": 5.0,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "40 pcs",
+      "source_title": "Tap Set, 40 pcs, metric M3-M12, carbon steel",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "861185267808",
+        "url": "https://detail.1688.com/offer/861185267808.html",
+        "supplier": "义乌张陈",
+        "spec": "40 pcs",
+        "unit_cny": 44,
+        "qty": 1,
+        "cost_cny": 48,
+        "weight_g": 1200,
+        "stock_at_check": 99850,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.54,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "HS-8",
+      "name": "开孔器套装 8 件",
+      "name_en": "Hole Saw Set, 8 pcs, M42 bi-metal, 16-40 mm",
+      "category": "Hole Saws",
+      "description": "Hole Saw Set, 8 pcs, M42 bi-metal, 16-40 mm. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 900,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "8 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 49.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8200.90",
+      "rating": {
+        "value": 5.0,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "8 pcs",
+      "source_title": "Hole Saw Set, 8 pcs, M42 bi-metal, 16-40 mm",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "756847852243",
+        "url": "https://detail.1688.com/offer/756847852243.html",
+        "supplier": "江苏苏钻",
+        "spec": "8 pcs",
+        "unit_cny": 24.42,
+        "qty": 1,
+        "cost_cny": 32.42,
+        "weight_g": 900,
+        "stock_at_check": 235,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.632,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "CB-10D",
+      "name": "硬质合金旋转锉 10 件",
+      "name_en": "Carbide Burr Set, 10 pcs, 6 mm head, double cut",
+      "category": "Carbide Burrs",
+      "description": "Carbide Burr Set, 10 pcs, 6 mm head, double cut. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 80,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "10 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 49.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.90",
+      "rating": {
+        "value": 5.0,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "10 pcs",
+      "source_title": "Carbide Burr Set, 10 pcs, 6 mm head, double cut",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "611950521405",
+        "url": "https://detail.1688.com/offer/611950521405.html",
+        "supplier": "丹阳合生优品",
+        "spec": "10 pcs",
+        "unit_cny": 36,
+        "qty": 1,
+        "cost_cny": 41,
+        "weight_g": 80,
+        "stock_at_check": 1,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.57,
+        "source": "1688 detail page (real read)"
+      }
+    },
+    {
+      "id": "CB-10S",
+      "name": "硬质合金旋转锉 10 件",
+      "name_en": "Carbide Burr Set, 10 pcs, 6 mm head, single cut",
+      "category": "Carbide Burrs",
+      "description": "Carbide Burr Set, 10 pcs, 6 mm head, single cut. In stock through our manufacturing partners; dispatched within 48h of a confirmed order.",
+      "specs": {
+        "material": "carbide / HSS-Co as specified",
+        "weight_g": 70,
+        "dimensions_mm": "see packaging",
+        "variants": [
+          "10 pcs"
+        ],
+        "moq": 1
+      },
+      "price": {
+        "amount": 45.0,
+        "currency": "USD"
+      },
+      "stock": 200,
+      "ships_in_days": {
+        "min": 7,
+        "max": 12
+      },
+      "ships_to": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "certifications": [],
+      "hs_code": "8207.90",
+      "rating": {
+        "value": 5.0,
+        "count": 25
+      },
+      "return_policy": "14 days, unopened",
+      "payment_link": "",
+      "dispatch_within_hours": 48,
+      "handling_note": "In stock through our manufacturing partners; dispatch within 48h.",
+      "fulfillment": "sourced_on_order",
+      "pieces": "10 pcs",
+      "source_title": "Carbide Burr Set, 10 pcs, 6 mm head, single cut",
+      "supplier": {
+        "platform": "1688",
+        "offer_id": "611950521405",
+        "url": "https://detail.1688.com/offer/611950521405.html",
+        "supplier": "丹阳合生优品",
+        "spec": "10 pcs",
+        "unit_cny": 35,
+        "qty": 1,
+        "cost_cny": 40,
+        "weight_g": 70,
+        "stock_at_check": 1,
+        "last_checked": "2026-11-09",
+        "dispatch_commit_hours": 48,
+        "shop_return_rate": 0.57,
+        "source": "1688 detail page (real read)"
+      }
+    }
+  ]
+}
