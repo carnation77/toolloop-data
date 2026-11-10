@@ -37,6 +37,16 @@ META, PRODUCTS = DATA["meta"], DATA["products"]
 BY_ID = {p["id"]: p for p in PRODUCTS}
 POLICY = META["policy"]
 LOCK_DAYS = int(POLICY["price_lock_days"])
+FUNNEL = pathlib.Path(__file__).with_name("funnel.log")
+
+def funnel(stage, extra=""):
+    """记录转化漏斗：view -> buy_click -> order -> pay_view -> paid"""
+    try:
+        with FUNNEL.open("a", encoding="utf-8") as f:
+            f.write("%s\t%s\t%s\n" % (datetime.datetime.now().isoformat(timespec="seconds"), stage, extra))
+    except Exception:
+        pass
+
 LOG = ROOT / "calls.log"
 MCP_LOG = ROOT / "mcp_calls.log"
 INVENTORY = ROOT / "inventory.json"
@@ -71,6 +81,27 @@ PAYPAL_ME = os.environ.get("PAYPAL_ME", "").strip().lstrip("@")   # paypal.me �
 PAYPAL_BUTTON_FILE = ROOT / "paypal_button.html"   # 用户在 PayPal 后台生成的按钮代码，放这里即生效
 PATH_PREFIX = urllib.parse.urlsplit(os.environ.get("PAY_BASE_URL","")).path.rstrip("/") or ""      # 你的 PayPal 商业账户邮箱
 ORDERS_DB = ROOT / "orders.json"
+
+_RATE = {}
+_RATE_RULES = {"/api/order": (8, 60), "/api/buy": (8, 60), "/mcp": (90, 60), "/api/quote": (30, 60)}
+
+def _rate_ok(ip, path):
+    """每 IP 每 path 前缀的令牌桶。超限返回 False。"""
+    rule = None
+    for k, v in _RATE_RULES.items():
+        if path.startswith(k):
+            rule = v; break
+    if not rule:
+        return True
+    limit, window = rule
+    now = _time.time()
+    key = (ip, path.split("/")[1] if path.startswith("/") else path)
+    bucket = _RATE.setdefault(key, [])
+    bucket[:] = [t for t in bucket if now - t < window]
+    if len(bucket) >= limit:
+        return False
+    bucket.append(now)
+    return True
 
 def orders_load():
     if ORDERS_DB.exists():
@@ -313,6 +344,7 @@ def order(body):
     except Exception as e:
         rec["notified"] = False
     orders_save(db)
+    funnel("order_created", oid + " " + pid + " " + str(total))
     return 200, {
         "order_id": oid, "status": "awaiting_payment",
         "product_id": pid, "qty": qty,
@@ -351,6 +383,11 @@ class H(BaseHTTPRequestHandler):
         self.send_header("Content-Type", ctype)
         self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Cache-Control", "no-store")
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("X-Frame-Options", "SAMEORIGIN")
+        self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
+        self.send_header("Permissions-Policy", "geolocation=(), microphone=(), camera=()")
+        self.send_header("Strict-Transport-Security", "max-age=31536000; includeSubDomains")
         self.send_header("Content-Length", str(len(raw)))
         self.end_headers()
         self.wfile.write(raw)
@@ -358,10 +395,29 @@ class H(BaseHTTPRequestHandler):
     def do_GET(self):
         parsed = urllib.parse.urlsplit(self.path)
         path, qs = parsed.path, urllib.parse.parse_qs(parsed.query)
+        if not _rate_ok(self.client_address[0], path):
+            self._log("GET", self.path, 429, "RATE_LIMITED")
+            return self._send(429, {"error": "rate_limited", "retry_after_seconds": 30})
         if path in ("/api/search", "/api/search/"):
             res = search(qs)
             self._log("GET", self.path, 200, f"n={res['count']}")
             return self._send(200, res)
+        m = re.fullmatch(r"/api/buy/([\w\-]+)/?", path)
+        if m:
+            pid = m.group(1)
+            p = BY_ID.get(pid)
+            if not p:
+                return self._send(404, {"error": "product_not_found", "product_id": pid})
+            funnel("buy_click", pid)
+            code, res = order({"product_id": pid, "qty": 1, "buyer": {"country": "US"}})
+            if code != 200:
+                return self._send(code, res)
+            self._log("GET", self.path, 302, pid)
+            self.send_response(302)
+            self.send_header("Location", PATH_PREFIX + "/pay/" + res["order_id"])
+            self.send_header("Content-Length", "0")
+            self.end_headers()
+            return
         m = re.fullmatch(r"/api/product/([\w\-]+)/?", path)
         if m:
             pid = m.group(1)
@@ -395,7 +451,28 @@ class H(BaseHTTPRequestHandler):
                 "logo_url": META["base_url"] + "/logo.png",
                 "contact_email": META["contact"],
                 "legal_info_url": META["base_url"] + "/ai.html"})
+        if path.rstrip("/") == "/admin/funnel":
+            if qs.get("token", [""])[0] != ADMIN_TOKEN:
+                return self._send(403, {"error": "forbidden"})
+            rows = []
+            if FUNNEL.exists():
+                rows = [ln.split("\t") for ln in FUNNEL.read_text(encoding="utf-8").splitlines() if ln]
+            from collections import Counter
+            c = Counter(r[1] for r in rows if len(r) > 1)
+            views = c.get("view", 0); clicks = c.get("buy_click", 0)
+            orders = c.get("order_created", 0); pays = c.get("pay_view", 0)
+            def pct(a, b):
+                return round(a * 100.0 / b, 1) if b else 0.0
+            return self._send(200, {
+                "window_note": "counts since funnel.log was created",
+                "stages": {"buy_click": clicks, "order_created": orders,
+                           "pay_view": pays, "paid": c.get("paid", 0)},
+                "conversion": {"click_to_order_pct": pct(orders, clicks),
+                               "order_to_pay_view_pct": pct(pays, orders)},
+                "recent": rows[-25:]})
         m2 = re.fullmatch(r"/pay/(ORD-[A-Za-z0-9\-]+)/?", path)
+        if m2:
+            funnel("pay_view", m2.group(1))
         if m2:
             oid = m2.group(1)
             rec = orders_load().get(oid)
@@ -560,6 +637,9 @@ class H(BaseHTTPRequestHandler):
 
     def do_POST(self):
         parsed = urllib.parse.urlsplit(self.path)
+        if not _rate_ok(self.client_address[0], parsed.path):
+            self._log("POST", self.path, 429, "RATE_LIMITED")
+            return self._send(429, {"error": "rate_limited", "retry_after_seconds": 30})
         if parsed.path.rstrip("/") in ("/mcp", "/.well-known/mcp"):
             try:
                 n = int(self.headers.get("Content-Length", "0") or 0)

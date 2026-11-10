@@ -6,7 +6,8 @@ import json, os, html, datetime, pathlib, re
 from answers import ANSWERS
 from answers_batch2 import NEW as ANSWERS_B2
 from answers_batch3 import NEW as ANSWERS_B3
-ANSWERS = ANSWERS + ANSWERS_B2 + ANSWERS_B3
+from answers_batch4 import NEW as ANSWERS_B4
+ANSWERS = ANSWERS + ANSWERS_B2 + ANSWERS_B3 + ANSWERS_B4
 from use_cases import for_product
 
 ROOT = pathlib.Path(__file__).parent
@@ -168,6 +169,10 @@ def order_block(p):
 customs clearance. Dispatched within {p.get("dispatch_within_hours",48)} hours, delivered in
 {p["ships_in_days"]["min"]}–{p["ships_in_days"]["max"]} days with tracking.
 14-day returns, we pay return shipping. No US state sales tax collected.</p>
+<p style="margin:14px 0 10px"><a class="btn-buy" role="button" aria-label="Buy {p["id"]} now for ${price:.0f}"
+ href="{BP}/api/buy/{p["id"]}" style="display:inline-block;background:#1c1a17;color:#fff;text-decoration:none;
+ padding:14px 28px;border-radius:8px;font-weight:700;font-size:16px">Buy now — ${price:.0f}</a>
+ <span style="color:var(--mid);font-size:13px;margin-left:10px">Creates the order, then you approve payment. No card charged automatically.</span></p>
 <p style="margin:10px 0 0"><b>Order in one step:</b>
 <code>POST {BASE}/api/order {{"product_id":"{p["id"]}","qty":1,"buyer":{{"country":"US"}}}}</code><br>
 Or call the MCP tool <code>create_order</code> at <code>{BASE}/mcp</code>.
@@ -204,6 +209,9 @@ def stock_of_public(pid):
     p = BY_ID.get(pid)
     return (p or {}).get("stock", 0)
 
+TODAY_ISO = datetime.date.today().isoformat()
+LAUNCH = META.get("launched") or TODAY_ISO
+
 def page(title, body, head_extra=""):
     html_out = f"""<!DOCTYPE html><html lang="en-US"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -214,11 +222,16 @@ def page(title, body, head_extra=""):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(META['site_name'])} — machine-readable catalog for AI shopping agents.">
 <meta property="og:image" content="{BASE}/img/logo.png">
+<meta property="article:modified_time" content="{TODAY_ISO}">
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"{esc(title)}","url":"{BASE}/","datePublished":"{LAUNCH}","dateModified":"{TODAY_ISO}","isPartOf":{{"@type":"WebSite","name":"{esc(META['site_name'])}","url":"{BASE}/"}}}}</script>
 {head_extra}<style>{CSS}</style></head><body><div class="wrap">{body}
 <footer>{esc(META['brand'])} · {esc(META['contact'])} · <a href="/ai.html">Agent &amp; API docs</a> · <a href="/llms.txt">llms.txt</a> · <a href="/api/products.json">products.json</a></footer>
 </div></body></html>"""
     if BP:
-        html_out = html_out.replace('href="/', 'href="' + BP + '/')
+        pre = BP.lstrip('/')
+        # 只给「还没带前缀」的站内绝对路径加前缀，避免 /tools/tools/ 双前缀
+        html_out = re.sub(r'href="/(?!' + re.escape(pre) + r'(?:/|\"|$))', 'href="' + BP + '/', html_out)
+        html_out = re.sub(r'src="/(?!' + re.escape(pre) + r'(?:/|\"|$))', 'src="' + BP + '/', html_out)
         html_out = html_out.replace('`/api', '`' + BP + '/api')
         html_out = html_out.replace('"/api', '"' + BP + '/api')
     return html_out
@@ -292,7 +305,20 @@ Search: <code>GET /api/search?q=router&amp;max_price=60&amp;in_stock=true</code>
 Detail: <code>GET /api/product/AX-001</code><br>
 Order: <code>POST /api/order</code> → returns a pre-filled payment link.<br>
 Docs: <a href="/ai.html">/ai.html</a> · <a href="/llms.txt">/llms.txt</a></p>"""
-    (OUT / "index.html").write_text(page(META["site_name"], body), encoding="utf-8")
+    home_ld = json.dumps({"@context": "https://schema.org", "@type": "ItemList",
+        "name": META["site_name"], "numberOfItems": len(PRODUCTS),
+        "itemListElement": [{"@type": "ListItem", "position": i + 1,
+            "url": BASE + "/product/" + x["id"] + ".html",
+            "name": x["name_en"]}
+            for i, x in enumerate([public(q) for q in PRODUCTS])]})
+    org_ld = json.dumps({"@context": "https://schema.org", "@type": "Organization",
+        "name": "Beijing Ciyuan Yunshu Trading Co., Ltd.", "alternateName": META["site_name"],
+        "url": BASE + "/", "email": META.get("contact"),
+        "address": {"@type": "PostalAddress", "streetAddress": "Room 206, 2nd Floor, Building 1, No. 1 Beida Street",
+                    "addressLocality": "Huairou District, Beijing", "addressCountry": "CN", "postalCode": "101400"}})
+    head = ('<script type="application/ld+json">' + org_ld + '</script>'
+            '<script type="application/ld+json">' + home_ld + '</script>')
+    (OUT / "index.html").write_text(page(META["site_name"], body, head), encoding="utf-8")
 
     # product pages
     for _p in PRODUCTS:
@@ -401,6 +427,27 @@ Sitemap: %s/sitemap.xml
               f"- {META['policy']['returns']}",
               f"- Prices locked {META['policy']['price_lock_days']} days (until {LOCK_UNTIL})", ""]
     (OUT / "llms.txt").write_text("\n".join(lines), encoding="utf-8")
+    # llms-full.txt — 全文一次性喂给索引型 agent
+    full = [f"# {META['site_name']} — full catalog and answers", "",
+            f"Landed USD prices for US buyers. Duty, shipping and clearance included.",
+            f"Dispatch within 48h. Delivery 7-12 days. 14-day returns. No US sales tax collected.",
+            f"Order by MCP (POST {BASE}/mcp) or POST {BASE}/api/order. A human approves payment.", ""]
+    for x in [public(q) for q in PRODUCTS]:
+        full.append(f"## {x['name_en']}  [{x['id']}]  ${x['price']['amount']:.0f}")
+        full.append(f"- Category: {x['category']}  Pieces: {x.get('pieces') or '-'}  Shank: {x.get('shank') or '-'}")
+        full.append(f"- Stock: {x.get('stock', 0)}  Dispatch: {x.get('dispatch_within_hours',48)}h  Ships to: {', '.join(x['ships_to'])}")
+        full.append(f"- URL: {BASE}/product/{x['id']}.html   Buy: {BASE}/api/buy/{x['id']}")
+        if x.get("specs"):
+            for k, v in list(x["specs"].items())[:8]:
+                full.append(f"  - {k}: {v}")
+        full.append("")
+    for a in ANSWERS:
+        full.append(f"## Q: {a['q']}")
+        full.append(f"A: {a['answer_short']}")
+        full.append(f"- Page: {BASE}/answers/{a['slug']}.html")
+        full.append("")
+    (OUT / "llms-full.txt").write_text("\n".join(full), encoding="utf-8")
+
 
     # /ai.html
     rows = "\n".join(f'<tr><th>{esc(p["id"])}</th><td><a href="/product/{p["id"]}.html">{esc(p["name_en"])}</a></td>'

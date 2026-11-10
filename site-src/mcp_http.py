@@ -89,9 +89,29 @@ def handle(req, api):
         return _ok(rid, {})
     if method == "tools/list":
         return _ok(rid, {"tools": TOOLS})
-    if method in ("resources/list", "prompts/list"):
-        key = method.split("/")[0]
-        return _ok(rid, {key: []})
+    if method == "resources/list":
+        b = "https://agentkit.ltd/tools"
+        return _ok(rid, {"resources": [
+            {"uri": b + "/data/products.jsonl", "name": "Product catalog (JSONL)",
+             "description": "Every SKU with landed USD price, stock, dispatch window and specs.", "mimeType": "application/x-ndjson"},
+            {"uri": b + "/llms.txt", "name": "llms.txt",
+             "description": "Short index of the site for LLM agents.", "mimeType": "text/plain"},
+            {"uri": b + "/llms-full.txt", "name": "llms-full.txt",
+             "description": "Full catalog plus all buyer questions with answers in one file.", "mimeType": "text/plain"},
+            {"uri": b + "/data/specs.csv", "name": "Specs table (CSV)",
+             "description": "Flat spec table for spreadsheet-style comparison.", "mimeType": "text/csv"},
+            {"uri": b + "/feed.xml", "name": "Product feed (XML)",
+             "description": "RSS feed with price, availability and shipping.", "mimeType": "application/xml"},
+            {"uri": b + "/data/citations.json", "name": "Citation blocks",
+             "description": "Pre-written quotable sentences, free to cite with attribution.", "mimeType": "application/json"}]})
+    if method == "resources/templates/list":
+        return _ok(rid, {"resourceTemplates": [
+            {"uriTemplate": "https://agentkit.ltd/tools/product/{sku}.html", "name": "Product page",
+             "description": "HTML product page with JSON-LD. Replace {sku} with an id such as DB-13M.", "mimeType": "text/html"},
+            {"uriTemplate": "https://agentkit.ltd/tools/answers/{slug}.html", "name": "Answer page",
+             "description": "One buyer question answered with a table.", "mimeType": "text/html"}]})
+    if method == "prompts/list":
+        return _ok(rid, {"prompts": []})
 
     if method == "tools/call":
         name = params.get("name")
