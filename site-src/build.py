@@ -224,7 +224,8 @@ def page(title, body, head_extra=""):
 <meta property="og:image" content="{BASE}/img/logo.png">
 <meta property="article:modified_time" content="{TODAY_ISO}">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"{esc(title)}","url":"{BASE}/","datePublished":"{LAUNCH}","dateModified":"{TODAY_ISO}","isPartOf":{{"@type":"WebSite","name":"{esc(META['site_name'])}","url":"{BASE}/"}}}}</script>
-{head_extra}<style>{CSS}</style></head><body><div class="wrap">{body}
+{head_extra}<style>{CSS}</style></head><body><div class="wrap"><!-- agent-summary: {esc(title)} | landed USD pricing, duty and shipping included | order via POST /api/order or MCP create_order -->
+<main>{body}</main>
 <footer>{esc(META['brand'])} · {esc(META['contact'])} · <a href="/ai.html">Agent &amp; API docs</a> · <a href="/llms.txt">llms.txt</a> · <a href="/api/products.json">products.json</a></footer>
 </div></body></html>"""
     if BP:
@@ -382,6 +383,28 @@ Sitemap: %s/sitemap.xml
         sm += f"  <url><loc>{u}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n"
     sm += "</urlset>\n"
     (OUT / "sitemap.xml").write_text(sm, encoding="utf-8")
+
+
+    # ---- md_lane: 给读文本的 agent 一条快车道 /p/{sku}.md ----
+    md_dir = OUT / "p"; md_dir.mkdir(parents=True, exist_ok=True)
+    for _x in [public(_q) for _q in PRODUCTS]:
+        L = ["# " + _x["name_en"], "",
+             "- SKU: " + _x["id"],
+             "- Category: " + _x["category"],
+             "- Price: USD " + str(_x["price"]["amount"]) + " (landed: US duty, shipping and clearance included)",
+             "- Stock: " + str(_x.get("stock", 0)) + "  Dispatch: " + str(_x.get("dispatch_within_hours", 48)) + "h",
+             "- Delivery: 7-12 days with tracking   Returns: 14 days, we pay return shipping",
+             "- Sales tax: not collected", ""]
+        if _x.get("specs"):
+            L += ["## Specs", ""]
+            for _k, _v in _x["specs"].items():
+                L.append("- " + str(_k) + ": " + str(_v))
+            L.append("")
+        L += ["## Order", "",
+              "POST " + BASE + "/api/order with {\"product_id\":\"" + _x["id"] + "\",\"qty\":1,\"buyer\":{\"country\":\"US\"}}",
+              "or call MCP tool create_order at " + BASE + "/mcp",
+              "or open " + BASE + "/api/buy/" + _x["id"] + " (creates the order, human approves payment)", ""]
+        (md_dir / (_x["id"] + ".md")).write_text(chr(10).join(L), encoding="utf-8")
 
     # llms.txt
     lines = [f"# {META['site_name']}", "",
