@@ -3,6 +3,7 @@
 只用标准库。用法：python3 server.py [port]
 """
 import json, os, sys, re, uuid, datetime, pathlib, urllib.parse
+import time as _time
 import notifier
 import mcp_http
 from answers import ANSWERS as _A1
@@ -452,7 +453,7 @@ class H(BaseHTTPRequestHandler):
                 "contact_email": META["contact"],
                 "legal_info_url": META["base_url"] + "/ai.html"})
         if path.rstrip("/") == "/admin/funnel":
-            if qs.get("token", [""])[0] != ADMIN_TOKEN:
+            if qs.get("token", [""])[0] != os.environ.get("ADMIN_TOKEN", "toolloop"):
                 return self._send(403, {"error": "forbidden"})
             rows = []
             if FUNNEL.exists():
