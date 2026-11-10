@@ -9,7 +9,9 @@ import mcp_http
 from answers import ANSWERS as _A1
 from answers_batch2 import NEW as _A2
 from answers_batch3 import NEW as _A3
-ANSWER_MAP = {a["slug"]: a for a in (_A1 + _A2 + _A3)}
+from answers_batch4 import NEW as _A4
+from answers_batch5 import NEW as _A5
+ANSWER_MAP = {a["slug"]: a for a in (_A1 + _A2 + _A3 + _A4 + _A5)}
 
 def answer_rec(slug):
     """答案页 → 推荐商品（优先有货、最便宜、与页面主题匹配）"""
