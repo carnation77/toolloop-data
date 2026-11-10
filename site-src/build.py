@@ -7,7 +7,8 @@ from answers import ANSWERS
 from answers_batch2 import NEW as ANSWERS_B2
 from answers_batch3 import NEW as ANSWERS_B3
 from answers_batch4 import NEW as ANSWERS_B4
-ANSWERS = ANSWERS + ANSWERS_B2 + ANSWERS_B3 + ANSWERS_B4
+from answers_batch5 import NEW as ANSWERS_B5
+ANSWERS = ANSWERS + ANSWERS_B2 + ANSWERS_B3 + ANSWERS_B4 + ANSWERS_B5
 from use_cases import for_product
 
 ROOT = pathlib.Path(__file__).parent
