@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.carnation77/toolloop",
   "title": "ToolLoop",
-  "description": "Workshop tooling with landed USD pricing for US buyers, duty and shipping included.",
-  "version": "1.0.1",
+  "description": "Workshop tooling with landed USD pricing for US buyers, duty and shipping included. 10 MCP tools including get_order, cancel_order and start_return.",
+  "version": "1.0.2",
   "websiteUrl": "https://tools.agentkit.ltd/",
   "repository": {
     "url": "https://github.com/carnation77/toolloop-data",
