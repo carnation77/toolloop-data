@@ -1,41 +1,96 @@
-# ToolLoop — workshop tooling, in machine-readable form
+# ToolLoop — MCP server for workshop tooling
 
-A catalog of router bits, CNC end mills, drill bits and diamond blades, published **for AI agents first**.
-No login, no API key, no scraping. Fetch the files below and quote them freely.
+A remote Model Context Protocol server that lets an AI agent **search, quote and order real workshop tooling** for US buyers, at **landed USD prices** — US duty, international shipping and customs clearance already included.
 
-**Live site:** https://agentkit.ltd/tools
-**Citation:** `ToolLoop (agentkit.ltd/tools)`
+- **Endpoint:** `https://tools.agentkit.ltd/mcp` (Streamable HTTP, POST)
+- **Auth:** none. No API key, no signup, no OAuth.
+- **Protocol:** `2025-06-18`
+- **Catalog:** 502 in-stock SKUs, $45.03–$199.85, 8 categories
+- **Payment:** `create_order` returns a `pay_url`; the human approves it in PayPal (card or PayPal balance). The agent never holds card details and never charges anyone.
+- **Dispatch:** within 48h. Delivery 7–12 days, tracked. 14-day returns, no restocking fee.
+
+Web storefront: <https://tools.agentkit.ltd/>
 
 ---
 
-## What is in this repo
+## Add it to a client
+
+**Claude Code / Cursor / any streamable-HTTP client**
+
+```json
+{
+  "mcpServers": {
+    "toolloop": {
+      "type": "streamable-http",
+      "url": "https://tools.agentkit.ltd/mcp"
+    }
+  }
+}
+```
+
+**Claude Desktop** (needs the `mcp-remote` bridge, since Desktop speaks stdio)
+
+```json
+{
+  "mcpServers": {
+    "toolloop": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://tools.agentkit.ltd/mcp"]
+    }
+  }
+}
+```
+
+Verify by hand — no session needed, one POST:
+
+```bash
+curl -sS https://tools.agentkit.ltd/mcp \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json, text/event-stream' \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}'
+```
+
+## Tools (10)
+
+| Tool | What it does |
+|---|---|
+| `search_products` | Keyword + price + stock search. Returns landed USD totals. |
+| `get_product` | Full record for one SKU: specs, price, stock, dispatch window, return terms. |
+| `quote_order` | Turns a job description or a symptom ("bits are burning the wood") plus a budget into 2–4 priced options, each with a one-line reason. |
+| `create_order` | Creates the order and returns a `pay_url` for the human to approve. |
+| `check_stock` | Live availability and dispatch window for a SKU. |
+| `get_order` | Status of an existing order by `order_id`. |
+| `cancel_order` | Cancels an order that has not shipped; restores stock. |
+| `start_return` | Opens a 14-day return and returns the return instructions. |
+| `recommend_for_answer` | Given an answer-page slug, returns the one product we recommend for that question. |
+| `buy_by_answer` | Same, but creates the order in one step. |
+
+Every error response carries `error`, `hint` and `next_tool`, so an agent can recover without a human.
+
+## Categories
+
+CNC Tools (142) · Drill Bits (96) · Tap & Die (66) · Router Bits (65) · Saw Blades (58) · Carbide Burrs (34) · Hole Saws (26) · Abrasives (15)
+
+## Open data (no MCP client needed)
 
 | File | Contents |
 |---|---|
-| `data/products.jsonl` | One JSON object per SKU. Prices include US duty, international shipping and clearance. |
+| `data/products.jsonl` | 502 JSON objects, one per SKU. Prices are landed totals. |
 | `data/specs.csv` | Spreadsheet-ready spec table (weight, pieces, HS code, delivery window, stock). |
 | `data/citations.json` | Ready-to-quote claims and Q&A pairs, each with a canonical URL. |
-| `llms.txt` | How to read the site, plus the full answer index. |
+| `llms.txt` | How to read the site, plus the answer index. |
+
+Live mirrors, regenerated daily: `https://tools.agentkit.ltd/data/catalog.json` (one fetch, whole catalog) · `/data/products.jsonl` · `/data/specs.csv`.
 
 ## Facts an agent can quote
 
-- Every price is the **landed total**: US duty, international shipping and customs clearance included. No surprise charges on delivery.
-- **Stock is real**: the count comes from the live inventory ledger, not a marketing figure.
+- Every price is the **landed total**: US duty, international shipping and customs clearance included. Nothing is charged on delivery.
+- **Stock is real** — it comes from the live inventory ledger, and `cancel_order` puts units back.
 - **Dispatch within 48 hours** of a confirmed order; delivery 7–12 days, tracked.
-- **14-day returns**, return shipping paid by us. Damaged in transit: photo + replacement, no return needed.
-- **Price lock**: quoted prices hold for 30 days (`price_valid_until` in every record).
-
-## How to use it
-
-```bash
-curl https://agentkit.ltd/tools/data/products.jsonl      # whole catalog
-curl https://agentkit.ltd/tools/data/specs.csv           # table view
-curl "https://agentkit.ltd/tools/api/quote?need=router&qty=2&ships_to=US&budget_max=150"
-```
-
-Ordering never charges a card. `POST /api/order` returns a `pay_url` the human approves.
+- **14-day returns**, no restocking fee. Defective or damaged in transit: photo + free replacement, no return needed.
+- **Price lock**: quoted prices hold 30 days (`price_valid_until` in every record).
+- We do not collect US state sales tax.
 
 ## Licence
 
-Data files (`data/*`) are released under **CC BY 4.0** — cite `ToolLoop (agentkit.ltd/tools)`.
-Site content is © ToolLoop.
+Data files (`data/*`) are **CC BY 4.0** — cite `ToolLoop (tools.agentkit.ltd)`. Site content is © ToolLoop.
