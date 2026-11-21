@@ -1,0 +1,6 @@
+tree 5639d2b81c2e9d7702f67f0bdae7ea20278b75f2
+parent 7c654882b91ffeb80c194764ab1bcc7ae381384e
+author carnation77 <carnation77@users.noreply.github.com> 1795274802 +0800
+committer carnation77 <carnation77@users.noreply.github.com> 1795274802 +0800
+
+chore: finalize gitignore for secret backups
