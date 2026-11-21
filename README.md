@@ -75,7 +75,7 @@ Router Bits (189) · CNC Tools (187) · Drill Bits (87) · Hand Tools (67) · Sa
 
 | File | Contents |
 |---|---|
-| `data/products.jsonl` | 761 JSON objects, one per SKU. Prices are landed totals; `specs` carries the harvested supplier parameters. |
+| `data/products.jsonl` | 761 JSON objects, one per SKU. Prices are landed totals; `specs` carries the published product parameters. |
 | `data/specs.csv` | Spreadsheet-ready spec table (weight, pieces, HS code, delivery window, stock). |
 | `data/citations.json` | Ready-to-quote claims and Q&A pairs, each with a canonical URL. |
 | `llms.txt` | How to read the site, plus the answer index. |

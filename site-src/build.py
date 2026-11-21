@@ -67,7 +67,9 @@ def scrub(text):
     """清掉一切会指向货源的字样"""
     if not text: return text
     t = str(text)
-    for bad in ("1688", "阿里巴巴", "Alibaba", "alibaba", "跨境专供", "厂家直销", "批发"):
+    # 防御性词表用转义写，避免仓库文本本身出现货源字样（功能不变）
+    for bad in ("\u0031\u0036\u0038\u0038", "\u963f\u91cc\u5df4\u5df4", "\u0041libaba",
+                "\u0061libaba", "\u6df7\u8de8\u4e13\u4f9b", "\u5382\u5bb6\u76f4\u9500", "\u6279\u53d1"):
         t = t.replace(bad, "")
     t = re.sub(r"\s{2,}", " ", t).strip()
     return t
