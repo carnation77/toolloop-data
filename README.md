@@ -5,7 +5,7 @@ A remote Model Context Protocol server that lets an AI agent **search, quote and
 - **Endpoint:** `https://tools.agentkit.ltd/mcp` (Streamable HTTP, POST)
 - **Auth:** none. No API key, no signup, no OAuth.
 - **Protocol:** `2025-06-18`
-- **Catalog:** 1,322 in-stock SKUs, $45.00–$199.85, 8 categories
+- **Catalog:** 761 in-stock SKUs, $45.03–$199.85, 10 categories
 - **Payment:** `create_order` returns a `pay_url`; the human approves it in PayPal (card or PayPal balance). The agent never holds card details and never charges anyone.
 - **Dispatch:** within 48h. Delivery 7–12 days, tracked. 14-day returns, no restocking fee.
 
@@ -69,13 +69,13 @@ Every error response carries `error`, `hint` and `next_tool`, so an agent can re
 
 ## Categories
 
-CNC Tools (132) · Drill Bits (96) · Saw Blades (58) · Router Bits (49) · Tap & Die (38) · Hole Saws (26) · Carbide Burrs (19) · Abrasives (15)
+Router Bits (189) · CNC Tools (187) · Drill Bits (87) · Hand Tools (67) · Saw Blades (66) · Tap & Die (45) · Carbide Burrs (43) · Measuring Tools (35) · Hole Saws (25) · Abrasives (17)
 
 ## Open data (no MCP client needed)
 
 | File | Contents |
 |---|---|
-| `data/products.jsonl` | 1,322 JSON objects, one per SKU. Prices are landed totals. |
+| `data/products.jsonl` | 761 JSON objects, one per SKU. Prices are landed totals; `specs` carries the harvested supplier parameters. |
 | `data/specs.csv` | Spreadsheet-ready spec table (weight, pieces, HS code, delivery window, stock). |
 | `data/citations.json` | Ready-to-quote claims and Q&A pairs, each with a canonical URL. |
 | `llms.txt` | How to read the site, plus the answer index. |

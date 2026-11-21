@@ -1,0 +1,20 @@
+{
+  "count": 761,
+  "price_min": 45.03,
+  "price_max": 199.85,
+  "categories": {
+    "Router Bits": 189,
+    "CNC Tools": 187,
+    "Drill Bits": 87,
+    "Hand Tools": 67,
+    "Saw Blades": 66,
+    "Tap & Die": 45,
+    "Carbide Burrs": 43,
+    "Measuring Tools": 35,
+    "Hole Saws": 25,
+    "Abrasives": 17
+  },
+  "qa": 130,
+  "product_fact": 761,
+  "specs_nonempty": 748
+}
