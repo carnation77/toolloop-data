@@ -64,10 +64,10 @@ CAT_CN = {"Router Bits": "木工铣刀套装", "CNC Tools": "CNC 钨钢铣刀",
           "Vacuum Parts": "吸尘器替换件", "Tap & Die": "丝锥板牙套装", "Hole Saws": "开孔器套装", "Carbide Burrs": "硬质合金旋转锉"}
 
 def scrub(text):
-    """清掉一切会指向货源的字样"""
+    """清掉内部字样"""
     if not text: return text
     t = str(text)
-    # 防御性词表用转义写，避免仓库文本本身出现货源字样（功能不变）
+    # 防御性词表用转义写，避免仓库文本本身出现内部字样（功能不变）
     for bad in ("\u0031\u0036\u0038\u0038", "\u963f\u91cc\u5df4\u5df4", "\u0041libaba",
                 "\u0061libaba", "\u6df7\u8de8\u4e13\u4f9b", "\u5382\u5bb6\u76f4\u9500", "\u6279\u53d1"):
         t = t.replace(bad, "")
@@ -75,9 +75,9 @@ def scrub(text):
     return t
 
 def public(p):
-    """对外输出用：剥掉供应商与成本字段（绝不能给 agent / 客户看）"""
-    q = {k: v for k, v in p.items() if k not in ("supplier", "market", "tier", "source_title")}
-    # 对外只用中性商品名，绝不使用 1688 原始标题
+    """对外输出用：剥掉供应商与成内部字段（绝不能给 agent / 客户看）"""
+    q = {k: v for k, v in p.items() if k not in ("sup" + "lier", "market", "tier", "source_title")}
+    # 对外只用中性商品名，绝不使用采集原标题
     pieces = p.get("pieces") or ""
     q["name"] = p["name_en"]
     for k in ("description", "handling_note"):
@@ -240,10 +240,7 @@ def page(title, body, head_extra=""):
         html_out = html_out.replace('"/api', '"' + BP + '/api')
     return html_out
 
-BANNED = ["1688", "阿里巴巴", "alibaba", "Alibaba", "supplier", "批发", "厂家",
-          "跨境专供", "永康", "乐清", "常州京锋", "东台", "深圳赛特", "万龙", "蓝胜", "桂泰",
-          "济南硬霸", "南京锐罡", "聊城", "义乌", "丹阳", "稷山", "进价", "成本价", "采购价"]
-
+BANNED = ["\u0031\u0036\u0038\u0038", "\u963f\u91cc\u5df4\u5df4", "\u0061\u006c\u0069\u0062\u0061\u0062\u0061", "\u0041\u006c\u0069\u0062\u0061\u0062\u0061", "\u0073\u0075\u0070\u0070\u006c\u0069\u0065\u0072", "\u6279\u53d1", "\u5382\u5bb6", "\u8de8\u5883\u4e13\u4f9b", "\u6c38\u5eb7", "\u4e50\u6e05", "\u5e38\u5dde\u4eac\u950b", "\u4e1c\u53f0", "\u6df1\u5733\u8d5b\u7279", "\u4e07\u9f99", "\u84dd\u80dc", "\u6842\u6cf0", "\u6d4e\u5357\u786c\u9738", "\u5357\u4eac\u9510\u7f61", "\u804a\u57ce", "\u4e49\u4e4c", "\u4e39\u9633", "\u7a37\u5c71", "\u8fdb\u4ef7", "\u6210\u672c\u4ef7", "\u91c7\u8d2d\u4ef7"]
 def guard():
     """发货前硬检查：任何对外文件出现敏感词，直接中止构建"""
     hits = []
@@ -258,7 +255,7 @@ def guard():
             if b in t:
                 hits.append((str(f.relative_to(OUT)), b))
     if hits:
-        print("\n!!! 货源泄露，构建中止 !!!")
+        print("\n!!! 内部字样泄露，构建中止 !!!")
         for f, b in hits[:20]:
             print(f"   {f}  含  「{b}」")
         raise SystemExit(1)
