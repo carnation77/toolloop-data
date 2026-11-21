@@ -5,3 +5,4 @@ __pycache__/
 *.prescrub-*
 *.prepublic-*
 *.bak-*
+.git-rewrite/
